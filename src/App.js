@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import react, { Component } from 'react';
 import './App.css';
+import Child from './components /child';
 
-function App() {
-  return (
+
+class App extends Component {
+  state= {
+    title :'Parent Title'
+  }
+  changeTheTitle = (newTitle) =>{
+    this.setState({title:newTitle});
+  }
+  render() {
+     return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Child ParentHandler ={this.changeTheTitle.bind(this,'Child Title')} title={this.state.title}/>
     </div>
   );
 }
-
+}
 export default App;
