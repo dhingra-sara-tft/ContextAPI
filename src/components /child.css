@@ -1,4 +1,4 @@
-.contaniner {
+.container {
   text-align: center;
   border: 7px solid red;
   width: 300px;
@@ -6,6 +6,6 @@
   padding-top: 100px;
 }
 
-#btnstyle {
+.btnstyle {
   font-size: 25px;
 }
