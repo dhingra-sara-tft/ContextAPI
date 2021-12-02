@@ -1,23 +1,13 @@
-import react, { Component } from "react";
-import "./components /child.css";
-import Child from "./components /child";
+import React from 'react'
+import ComponentA from './components /ComponentA'
 
-class App extends Component {
-  state = {
-    title: "Parent Title",
-  };
-  changeTheTitle = (newTitle) => {
-    this.setState({ title: newTitle });
-  };
-  render() {
-    return (
-      <div className="App">
-        <Child
-          ParentHandler={this.changeTheTitle.bind(this, "Child Title")}
-          title={this.state.title}
-        />
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <div>
+      <ComponentA/>
+    </div>
+  )
 }
-export default App;
+
+export default App
+
